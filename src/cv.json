@@ -1,18 +1,18 @@
 {
   "basics": {
     "name": "Facundo Meza",
-    "label": "Programmer",
-    "image": "",
+    "label": "Full Stack Developer",
+    "image": "https://avatars.githubusercontent.com/u/62955066?v=4",
     "email": "contact@facundomeza.com",
     "phone": "(912) 555-4321",
     "url": "https://facundomeza.com",
     "summary": "A summary of John Doe…",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "",
+      "postalCode": "38400",
+      "city": "Puerto de la Cruz",
       "countryCode": "ES",
-      "region": "Tenerife"
+      "region": "España"
     },
     "profiles": [
       {

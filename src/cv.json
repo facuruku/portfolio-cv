@@ -30,10 +30,37 @@
   "work": [
     {
       "name": "CIB Group GmbH",
-      "position": "Developer",
+      "position": "Full-Stack Developer",
       "url": "https://cib.de",
       "startDate": "2021-09-01",
-      "endDate": "",
+      "endDate": null,
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Nartex Software SL",
+      "position": "Full-Stack Developer",
+      "url": "https://www.nartexsoft.com/",
+      "startDate": "2021-03-01",
+      "endDate": "2021-09-01",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "MecaClima SL",
+      "position": "Mechanic",
+      "url": "https://www.tallermecaclima.com/",
+      "startDate": "2018-05-01",
+      "endDate": "2019-09-01",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Binter",
+      "position": "Aircraft Handling Technician",
+      "url": "https://www.bintercanarias.com/es/corporativo",
+      "startDate": "2017-02-01",
+      "endDate": "2018-04-30",
       "summary": "Description…",
       "highlights": ["Started the company"]
     }
@@ -43,20 +70,20 @@
       "organization": "Organization",
       "position": "Volunteer",
       "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
+      "startDate": "2021-03-01",
+      "endDate": "2013-09-01",
       "summary": "Description…",
       "highlights": ["Awarded 'Volunteer of the Month'"]
     }
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
+      "institution": "CIFP César Manrique",
+      "url": "https://www3.gobiernodecanarias.org/medusa/edublog/cifpcesarmanrique/",
       "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
+      "studyType": "Associate Degree in Web Development",
+      "startDate": "2019-09-01",
+      "endDate": "2021-04-01",
       "score": "4.0",
       "courses": ["DB1101 - Basic SQL"]
     }

@@ -18,13 +18,18 @@ import { education } from '@cv'
                         <header>
 
                             <div>
-                                <h3>{institution}</h3>
-                                <h4>{studyType}</h4>
+                                <h3>
+                                    <a href={url} 
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                        {institution}
+                                    </a>
+                                </h3>
                             </div>
                             <time>{years}</time>
                         </header>
                         <footer>
-                            <p>{area}</p>
+                            <p>{studyType}</p>
                         </footer>
                     </article>
                 </li>
@@ -42,9 +47,10 @@ import { education } from '@cv'
         gap:32px;
     }
 
-    article h3{
+    article h3, article a{
         font-weight: 500;
         color:#111;
+        font-size: 1rem;
     }
 
     article h4{
@@ -62,5 +68,9 @@ import { education } from '@cv'
     time{
         color:#555;
         font-size: .85rem;
+    }
+
+     a:hover{
+        text-decoration: underline;
     }
 </style>

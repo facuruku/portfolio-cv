@@ -115,19 +115,57 @@
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Springboot"
+    },
+    {
+      "name": "Vaadin"
+    },
+    {
+      "name": "JUnit"
+    },
+    {
+      "name": "Seleinum"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "Vue"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "Docker"
     }
   ],
   "languages": [
     {
       "language": "Spanish",
-      "fluency": "Native speaker"
+      "fluency": "Native speaker (C2)"
     },
     {
       "language": "English",
-      "fluency": "Professional working proficiency"
+      "fluency": "Professional working proficiency (C1)"
+    },
+    {
+      "language": "German",
+      "fluency": "Lower Intermediate (A1)"
     }
   ],
   "interests": [

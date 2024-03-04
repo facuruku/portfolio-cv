@@ -6,7 +6,7 @@ import LinkedIn from '@/icons/LinkedIn.astro'
 import GitHub from '@/icons/GitHub.astro'
 import WorldMap from '@/icons/WorldMap.astro'
 
-const { name, label, image, location, profiles, phone, email  } = basics
+const { name, label, image, location, profiles, email  } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -45,7 +45,7 @@ const SOCIAL_ICONS: Record<string, any> = {
                     )
                 }
                 {
-                    profiles.map(({ network, url, username }) => {
+                    profiles.map(({ network, url }) => {
                         const Icon = SOCIAL_ICONS[network]
                         return (
                             <a href={url}
@@ -98,6 +98,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 .info a:hover{
     color:#000;
     span{
+        color:inherit;
         text-decoration: underline;
     }
 }

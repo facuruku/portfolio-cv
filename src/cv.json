@@ -98,7 +98,25 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
+      "name": "Vaadin",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Springboot & Spring MVC",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Vue",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Thymeleaf",
       "date": "2021-11-07",
       "issuer": "Company",
       "url": "https://certificate.com"

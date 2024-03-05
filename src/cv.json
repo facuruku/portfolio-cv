@@ -182,12 +182,36 @@
   ],
   "projects": [
     {
+      "name": "OK.FINN",
+      "isActive": true,
+      "description": " Description under construction...🚧",
+      "stack": ["Java", "Vaadin", "JUnit", "Seleinum"],
+      "role": "Full Stack Developer",
+      "url": "https://www.akdb.de/loesungen/okfinanzen/okfinn/"
+    },
+    {
+      "name": "doXiview",
+      "isActive": true,
+      "description": " Description under construction...🚧",
+      "role": "Full Stack Developer",
+      "stack": ["Vue"],
+      "url": "https://www.cib.de/es/doxiview/"
+    },
+    {
+      "name": "Musicfy",
+      "isActive": true,
+      "description": " Description under construction...🚧",
+      "stack": ["Vue", "Vite", "Firebase", "TailwindCSS"],
+      "role": "Side Project",
+      "url": "https://musicfy.facundomeza.com/"
+    },
+    {
       "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/"
+      "isActive": true,
+      "description": " Description under construction...🚧",
+      "role": "Developer",
+      "stack": ["Won award at AIHacks 2016"],
+      "url": "https://musicfy.facundomeza.com/"
     }
   ]
 }

@@ -194,7 +194,7 @@
       "isActive": true,
       "description": " Description under construction...🚧",
       "role": "Full Stack Developer",
-      "stack": ["Vue"],
+      "stack": ["Vue", "Java"],
       "url": "https://www.cib.de/es/doxiview/"
     },
     {
@@ -206,12 +206,12 @@
       "url": "https://musicfy.facundomeza.com/"
     },
     {
-      "name": "Project",
-      "isActive": true,
+      "name": "AmigoInvisible",
+      "isActive": false,
       "description": " Description under construction...🚧",
-      "role": "Developer",
-      "stack": ["Won award at AIHacks 2016"],
-      "url": "https://musicfy.facundomeza.com/"
+      "role": "Side Project",
+      "stack": ["Vue"],
+      "url": "https://www.google.es"
     }
   ]
 }

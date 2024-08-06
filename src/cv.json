@@ -216,6 +216,14 @@
       "url": "https://www.cib.de/es/doxiview/"
     },
     {
+      "name": "DIRCAC",
+      "isActive": true,
+      "description": " Description under construction...🚧",
+      "role": "Full Stack Developer",
+      "stack": ["Java", "Springboot", "Thymeleaf"],
+      "url": "https://www.gobiernodecanarias.org/transformaciondigital/platino/servicios/dircac/"
+    },
+    {
       "name": "Musicfy",
       "isActive": true,
       "description": " Description under construction...🚧",

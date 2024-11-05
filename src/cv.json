@@ -34,7 +34,7 @@
       "url": "https://cib.de",
       "startDate": "2021-09-01",
       "endDate": null,
-      "summary": "Description…🚧",
+      "summary": "Working with the German client AKDB, contributing to the development of a financial tax management application for Bavaria’s public administration. Collaborated with many teams, handling analysis and front/back-end development.",
       "highlights": ["Started the company"]
     },
     {
@@ -43,7 +43,7 @@
       "url": "https://www.nartexsoft.com/",
       "startDate": "2021-03-01",
       "endDate": "2021-09-01",
-      "summary": "Description…🚧",
+      "summary": "Responsible for migrating and enhancing DIRCAC (user and directory management application for the Canary Islands Goverment). Migrating existing codebase from Spring to Spring Boot, overseeing both front-end and back-end improvements.",
       "highlights": ["Started the company"]
     },
     {
@@ -52,7 +52,7 @@
       "url": "https://www.tallermecaclima.com/quienes-somos",
       "startDate": "2018-05-01",
       "endDate": "2019-09-01",
-      "summary": "Description…🚧",
+      "summary": "Full-time refrigeration mechanic responsible for troubleshooting and repairs on TITSA SL’s vehicle fleet across northern Tenerife. (+200 Vehicles)",
       "highlights": ["Started the company"]
     },
     {
@@ -61,7 +61,7 @@
       "url": "https://www.bintercanarias.com/es/corporativo",
       "startDate": "2017-02-01",
       "endDate": "2018-04-30",
-      "summary": "Description…🚧",
+      "summary": "Airport ground operations at Tenerife North Airport (TFN), ensuring safe movement of vehicles, personnel, and aircraft, along with cargo handling and loading supervision.",
       "highlights": ["Started the company"]
     }
   ],
@@ -84,7 +84,7 @@
       "studyType": "Associate Degree in Web Development",
       "startDate": "2019-09-01",
       "endDate": "2021-04-01",
-      "score": "4.0",
+      "score": "9.8",
       "courses": ["DB1101 - Basic SQL"]
     }
   ],
@@ -133,18 +133,6 @@
   ],
   "skills": [
     {
-      "name": "HTML"
-    },
-    {
-      "name": "CSS"
-    },
-    {
-      "name": "JavaScript"
-    },
-    {
-      "name": "Tailwind"
-    },
-    {
       "name": "Java"
     },
     {
@@ -163,13 +151,25 @@
       "name": "Git"
     },
     {
-      "name": "Vue"
-    },
-    {
       "name": "SQL"
     },
     {
       "name": "Docker"
+    },
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "Vue"
     }
   ],
   "languages": [
@@ -202,8 +202,8 @@
     {
       "name": "OK.FINN",
       "isActive": true,
-      "description": " Description under construction...🚧",
-      "stack": ["Java", "Vaadin", "JUnit", "Seleinum"],
+      "description": "Description under construction...🚧",
+      "stack": ["Java", "Vaadin", "JUnit", "Seleinum", "Docker"],
       "role": "Full Stack Developer",
       "url": "https://www.akdb.de/loesungen/okfinanzen/okfinn/"
     },
@@ -237,7 +237,7 @@
       "description": " Description under construction...🚧",
       "role": "Side Project",
       "stack": ["Vue"],
-      "url": "https://www.google.es"
+      "url": "#"
     }
   ]
 }

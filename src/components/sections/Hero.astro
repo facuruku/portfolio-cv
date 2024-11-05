@@ -13,6 +13,11 @@ const SOCIAL_ICONS: Record<string, any> = {
     GitHub,
     LinkedIn,
 }
+
+const linkedinInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedInUrl = linkedinInfo?.url.replace('https://','') || "#";
+const githubInfo = profiles.find(({ network }) => network === "GitHub");
+const githubUrl = githubInfo?.url.replace('https://','') || "#";
 ---
 
 <Section>
@@ -31,6 +36,9 @@ const SOCIAL_ICONS: Record<string, any> = {
                     {city}, {region}
                 </span>
             </a>
+            <footer class="print">
+                    {email} &bull; {linkedInUrl} &bull; {githubUrl}
+            </footer>
             <footer>
                 {
                     email && (
@@ -132,6 +140,8 @@ span{
 }
 
 footer{
+    font-size: 0.6rem;
+    color:#555;
     display: flex;
     gap: 4px;
     margin-top: 8px;
@@ -154,6 +164,20 @@ footer a {
 footer a:hover {
     border: 1px solid #ddd;
     background: #f1f1f1;
+}
+
+.print{
+    display: none;
+}
+
+@media print {
+    .print{
+        display: block;
+    }
+
+    .no-print{
+        display: none;
+    }
 }
 
 </style>

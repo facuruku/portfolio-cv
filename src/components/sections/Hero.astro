@@ -39,7 +39,7 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
             <footer class="print">
                     {email} &bull; {linkedInUrl} &bull; {githubUrl}
             </footer>
-            <footer>
+            <footer class="no-print">
                 {
                     email && (
                         <a href={`mailto:${email}`}

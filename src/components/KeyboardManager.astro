@@ -1,8 +1,135 @@
-<footer></footer>
+---
+import {basics} from "@cv"
+import {GitHubIcon} from "@/icons/GitHubIcon.js"
+import {LinkedInIcon} from "@/icons/LinkedInIcon.js"
+
+const { profiles} = basics
+
+const SOCIAL_ICONS: Record<string,string> = {
+    GitHub:GitHubIcon,
+    LinkedIn:LinkedInIcon,
+}
+
+const profilesInfo = profiles.map(({ network, url }) => {
+    const icon = SOCIAL_ICONS[network]
+
+    return {
+        id: network,
+        section: 'Social',
+        title: `Visit ${network}`,
+        icon,
+        url
+    }
+})
+
+---
+<footer class="no-print">
+    Press <kbd id="commandKey"></kbd> + <kbd>K</kbd> to open command palette.
+</footer>
+
+<ninja-keys 
+data-info={JSON.stringify(profilesInfo)} 
+hideBreadcrumbs></ninja-keys>
+
+<script>
+ import "ninja-keys";
+ import {PrintIcon} from '@/icons/printIcon.js';
+
+   interface Info {
+    id: string
+    section: string
+    title: string
+    url: string
+    icon: string
+    hotkey: string
+    handler?: () => void
+  }
+
+ const ninja = document.querySelector("ninja-keys");
+
+ if(ninja != null){
+
+    const commandKey = document.querySelector('#commandKey');
+    const OSCommandKey = navigator?.userAgent?.includes('Mac') ? 'Cmd' : 'Ctrl';
+    commandKey != null ? commandKey.textContent = OSCommandKey : null;
+
+    const socialSection = ninja.getAttribute("data-info") ?? "[]"
+    const parsedInfo = JSON.parse(socialSection)
+
+    const data = parsedInfo.map(
+      ({ url, icon, id, section, title }: Info) => {
+        return {
+          id,
+          title,
+          icon,
+          hotkey: `${OSCommandKey}+${title[0].toUpperCase()}`,
+          section,
+          handler: () => {
+            window.open(url, "_blank")
+          },
+        }
+      }
+    )
 
 
-<script></script>
+    ninja.data = [
+      {
+        id: 'print',
+        title: 'Print',
+        hotkey: `${OSCommandKey}+P`,
+        icon: PrintIcon,
+        section: 'Actions',
+        handler: () => {
+            window.print();
+        },
+      },
+      ...data
+    ];
+}
+
+
+
+</script>
 
 <style>
+
+@media print{
+    ninja-keys{
+        display: none !important;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer{
+    background:  #fdfdfd;
+    border-top:1px solid #eee;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-block: 16px;
+    text-align: center;
+
+    view-timeline: --revealing;
+    view-timeline-axis: block;
+
+    animation: linear .4s fadeIn;
+    animation-timeline: --revealing;
+    animation-range: entry 100% cover 10% ;
+}
+
+kbd{
+    background:#eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: .85em;
+}
 
 </style>

@@ -4,7 +4,7 @@ import Section from '@/components/Section.astro'
 import { projects } from '@cv'
 ---
 
-<Section title="Projects">
+<Section title="Projects" emoji="💻">
 
     <ul>
         {
@@ -22,9 +22,9 @@ import { projects } from '@cv'
                                 <p>{description}</p>
                             </header>
                             <footer>
-                                <span>{role}</span>
+                                <span class="bg-gray-800">{role}</span>
                                 {stack.map((tech) => {
-                                    return <span>{tech}</span>
+                                    return <span class="bg-gray-800">{tech}</span>
                                 })}
                             </footer>
                         </article>
@@ -61,7 +61,6 @@ import { projects } from '@cv'
         a{
             display: inline-flex;
             text-decoration: none;
-            color: #333;
             margin-bottom: 5px;
         }
 
@@ -87,9 +86,8 @@ import { projects } from '@cv'
         gap:4px;
 
         span{
+            color:#eee;
             border-radius: 6px;
-            background:#eee;
-            color:#333;
             font-size: .6rem;
             font-weight: 500;
             padding: .2rem .6rem;

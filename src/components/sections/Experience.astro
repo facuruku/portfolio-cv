@@ -4,7 +4,7 @@ import Section from '@/components/Section.astro'
 import { work } from '@cv'
 ---
 
-<Section title="Experience">
+<Section title="Experience" emoji="💼">
 
     <ul>
         {work.map(({name, startDate, endDate, position, summary, url}) => {
@@ -18,7 +18,7 @@ import { work } from '@cv'
                         <header>
 
                             <div>
-                                <h3>
+                                <h3 class="text-gray-800 dark:text-white">
                                     <a href={url} 
                                     title=""
                                     target="_blank"
@@ -31,7 +31,7 @@ import { work } from '@cv'
                             <time>{years}</time>
                         </header>
                         <footer>
-                            <p>{summary}</p>
+                            <p class="dark:text-gray-300">{summary}</p>
                         </footer>
                     </article>
                 </li>
@@ -51,13 +51,11 @@ import { work } from '@cv'
 
     article h3, article a{
         font-weight: 500;
-        color:#111;
         font-size: 1rem;
     }
 
     article h4{
         font-weight: 400;
-        color:#222;
         font-size: .9rem;
     }
 
@@ -69,7 +67,6 @@ import { work } from '@cv'
     }
 
     time{
-        color:#555;
         font-size: .85rem;
     }
 

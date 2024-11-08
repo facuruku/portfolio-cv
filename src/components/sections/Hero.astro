@@ -24,14 +24,14 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
     <div class="container">
         <div class="info">
             <h1>{name}</h1>
-            <h2>{label}</h2>
+            <h2 class="dark:text-gray-300">{label}</h2>
             <a href={`https://www.google.com/maps/place/${city}`}
             title="See location on Google Maps"
             target="_blank"
             rel="noopener noreferrer"
             class="location"
             >
-                <WorldMap/>
+                <WorldMap class="inline"/>
                 <span>
                     {city}, {region}
                 </span>
@@ -46,8 +46,9 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
                             title={`Send ${name} an email to ${email}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="border border-gray-300 hover:bg-gray-300 group"
                         >
-                            <Mail/>
+                            <Mail class="dark:text-gray-200 group-hover:text-gray-800"/>
                         </a>
                     
                     )
@@ -60,8 +61,9 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
                                 title={`Visit ${name}'s ${network} profile`}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                class="border border-gray-300 hover:bg-gray-300 group"
                             >
-                                <Icon/>
+                                <Icon class="dark:text-gray-200 group-hover:text-gray-800"/>
                             </a>
                         )
 
@@ -96,7 +98,6 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
 }
 
 .info a {
-    color:#777;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
@@ -104,7 +105,6 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
 }
 
 .info a:hover{
-    color:#000;
     span{
         color:inherit;
         text-decoration: underline;
@@ -115,7 +115,6 @@ h1{
 }
 
 h2{
-    color:#444;
     font-family: monospace;
     font-weight: 500;
     font-size: 1.1rem;
@@ -130,7 +129,6 @@ img{
 }
 
 span{
-    color:#666;
     display: flex;
     align-items: center;
     gap: .25rem;
@@ -153,7 +151,6 @@ footer a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
     padding: 4px;
     height: 32px;
     width: 32px;
@@ -161,10 +158,6 @@ footer a {
     transition: all .3s ease;
 }
 
-footer a:hover {
-    border: 1px solid #ddd;
-    background: #f1f1f1;
-}
 
 .print{
     display: none;

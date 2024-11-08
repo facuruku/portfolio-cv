@@ -4,11 +4,11 @@ import Section from '@/components/Section.astro'
 import { skills } from '@cv'
 ---
 
-<Section title="Skills">
+<Section title="Skills" emoji="🛠">
 
     <ul>
         {skills.map(({name}) => (
-            <li>{name}</li>
+            <li class="bg-gray-800 text-white">{name}</li>
         ))}
     </ul>
 
@@ -22,8 +22,6 @@ import { skills } from '@cv'
     }
     li {
         border-radius: 6px;
-        background: #444;
-        color:#fff;
         font-size: .8rem;
         font-weight: 500;
         padding: .3rem .6rem;

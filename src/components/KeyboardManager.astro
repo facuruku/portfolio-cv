@@ -23,11 +23,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
 })
 
 ---
-<footer class="no-print">
-    Press <kbd id="commandKey"></kbd> + <kbd>K</kbd> to open command palette.
+<footer class="no-print w-full bottom-0 rounded-xl flex justify-center">
+  <div class="min-w-[400px] px-2 py-1 justify-center bg-gray-800 text-white rounded-xl">
+    Press <kbd id="commandKey"></kbd> + <kbd>K</kbd> to open command palette
+  </div>
 </footer>
 
-<ninja-keys 
+<ninja-keys
 data-info={JSON.stringify(profilesInfo)} 
 hideBreadcrumbs></ninja-keys>
 
@@ -109,11 +111,7 @@ hideBreadcrumbs></ninja-keys>
 }
 
 footer{
-    background:  #fdfdfd;
-    border-top:1px solid #eee;
     position: fixed;
-    bottom: 0px;
-    width: 100%;
     padding-block: 16px;
     text-align: center;
 
@@ -126,10 +124,12 @@ footer{
 }
 
 kbd{
-    background:#eee;
+    background: #e5e5e5;
+    color:#222;
     padding: 2px 4px;
     border-radius: 4px;
-    font-size: .85em;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 </style>

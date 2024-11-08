@@ -76,6 +76,24 @@ hideBreadcrumbs></ninja-keys>
     )
 
 
+    const updateIcon = (themePreference: string) => {
+      document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
+        (element as HTMLElement).style.scale = element.id === themePreference ? "1" : "0";
+      });
+    };
+
+    const toggleTheme = () => {
+      const themePreference = localStorage.getItem("theme") ?? "system";
+      const isDark =
+        themePreference === "dark" ||
+        (themePreference === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+      ninja.classList[isDark ? "add" : "remove"]("dark");
+      updateIcon(themePreference);
+    };
+
+
     ninja.data = [
       {
         id: 'print',
@@ -95,7 +113,7 @@ hideBreadcrumbs></ninja-keys>
         icon: SunIcon,
         handler: () => {
           localStorage.setItem("theme", "light");
-          updateTheme(); //ThemeToggle.astro script:inline
+          toggleTheme();
         },
       },
       {
@@ -106,7 +124,7 @@ hideBreadcrumbs></ninja-keys>
         icon: MoonIcon,
         handler: () => {
           localStorage.setItem("theme", "dark");
-          updateTheme(); //ThemeToggle.astro script:inline
+          toggleTheme();
         },
       },
       ...data

@@ -36,6 +36,8 @@ hideBreadcrumbs></ninja-keys>
 <script>
  import "ninja-keys";
  import {PrintIcon} from '@/icons/printIcon.js';
+ import {MoonIcon} from '@/icons/MoonIcon.js';
+ import {SunIcon} from '@/icons/SunIcon.js';
 
    interface Info {
     id: string
@@ -83,6 +85,28 @@ hideBreadcrumbs></ninja-keys>
         section: 'Actions',
         handler: () => {
             window.print();
+        },
+      },
+           {
+        id: "theme-light",
+        title: "Switch to Light Theme",
+        hotkey: `${OSCommandKey}+I`,
+        section: "Actions",
+        icon: SunIcon,
+        handler: () => {
+          localStorage.setItem("theme", "light");
+          updateTheme(); //ThemeToggle.astro script:inline
+        },
+      },
+      {
+        id: "theme-dark",
+        title: "Switch to Dark Theme",
+        hotkey: `${OSCommandKey}+O`,
+        section: "Actions",
+        icon: MoonIcon,
+        handler: () => {
+          localStorage.setItem("theme", "dark");
+          updateTheme(); //ThemeToggle.astro script:inline
         },
       },
       ...data

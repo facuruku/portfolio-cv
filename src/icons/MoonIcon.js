@@ -1,5 +1,5 @@
 export const MoonIcon = `<svg 
-    {...Astro.props}
+    style="margin-right: 8px"
     width="16"
     height="16"
     xmlns="http://www.w3.org/2000/svg" 

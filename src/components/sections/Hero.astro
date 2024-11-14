@@ -23,8 +23,8 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
 <Section>
     <div class="container">
         <div class="info">
-            <h1>{name}</h1>
-            <h2 class="dark:text-gray-300">{label}</h2>
+            <h1 class="text-xl sm:text-3xl">{name}</h1>
+            <h2 class="dark:text-gray-300 md:text-balance">{label}</h2>
             <a href={`https://www.google.com/maps/place/${city}`}
             title="See location on Google Maps"
             target="_blank"
@@ -71,8 +71,11 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
                 }
             </footer>
         </div>
-        <figure>
-            <img src={image} alt={name} />
+        <figure class="hidden md:block">
+            <picture>
+                <source srcset={image} type="image/webp" media="(min-width: 768px)"/>
+                <img src={image} alt={name} />
+            </picture>
         </figure>
     </div>
 </Section>
@@ -110,15 +113,11 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
         text-decoration: underline;
     }
 }
-h1{
-    font-size: 2rem;
-}
 
 h2{
     font-family: monospace;
     font-weight: 500;
-    font-size: 1.1rem;
-    text-wrap: balance;
+    font-size: 1rem;
 }
 
 img{

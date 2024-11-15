@@ -145,9 +145,11 @@ hideBreadcrumbs></ninja-keys>
 
 @keyframes fadeIn {
     from {
+        transform: translateY(50%);
         opacity: 0;
     }
     to {
+      transform: translateY(0);
         opacity: 1;
     }
 }
@@ -160,9 +162,9 @@ footer{
     view-timeline: --revealing;
     view-timeline-axis: block;
 
-    animation: linear .4s fadeIn;
+    animation: linear .6s fadeIn;
     animation-timeline: --revealing;
-    animation-range: entry 100% cover 10% ;
+    animation-range: entry 100% cover 15% ;
 }
 
 kbd{

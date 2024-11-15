@@ -7,10 +7,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const locale = Astro.currentLocale
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Facundo Meza Portfolio CV printable" />

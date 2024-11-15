@@ -1,7 +1,9 @@
 ---
 import Section from '@/components/Section.astro'
 
-import { basics } from "@cv"
+const { title, cv } = Astro.props
+
+const { basics } = cv
 
 const { summary } = basics
 
@@ -9,7 +11,7 @@ const experienceYears = new Date().getFullYear() - 2021 +1; // +1 to include the
 
 ---
 
-<Section title="About" emoji="📜">
+<Section title={title ?? "About"} emoji="📜">
 <p class="text-gray-800 dark:text-gray-200">
     +{experienceYears} {summary}
 </p>

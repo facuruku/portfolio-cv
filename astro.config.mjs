@@ -11,4 +11,11 @@ export default defineConfig({
     webAnalytics: { enabled: true },
   }),
   integrations: [sitemap(), tailwind()],
+  i18n: {
+    locales: ["en", "es", "de"],
+    defaultLocale: "es",
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

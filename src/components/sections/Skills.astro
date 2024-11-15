@@ -1,10 +1,14 @@
 ---
 import Section from '@/components/Section.astro'
+import type { Skill } from '@/types/cv'
 
-import { skills } from '@cv'
+const { title, cv } = Astro.props
+
+
+const { skills }: { skills: Skill[] } = cv
 ---
 
-<Section title="Skills" emoji="🛠">
+<Section title={title ?? "Skills"} emoji="🛠">
 
     <ul>
         {skills.map(({name}) => (

@@ -1,12 +1,15 @@
 ---
 import Section from '@/components/Section.astro'
+import type { Education } from '@/types/cv'
 
-import { education } from '@cv'
+const { title, cv } = Astro.props
+
+const { education }: { education: Education[] } = cv
 ---
 
-<Section title="Education" emoji="🎓">
+<Section title={title ?? "Education"} emoji="🎓">
 
-      <ul>
+    <ul>
         {education.map(({institution, area, studyType, startDate, endDate, courses, url}) => {
 
             const startYear = new Date(startDate).getFullYear()
@@ -16,7 +19,6 @@ import { education } from '@cv'
                 <li>
                     <article>
                         <header>
-
                             <div>
                                 <h3>
                                     <a href={url} 
@@ -26,7 +28,7 @@ import { education } from '@cv'
                                     </a>
                                 </h3>
                             </div>
-                            <time>{years}</time>
+                        <time>{years}</time>
                         </header>
                         <footer>
                             <p>{studyType}</p>
@@ -35,7 +37,8 @@ import { education } from '@cv'
                 </li>
                 )
         })
-    }
+        }
+    </ul>
 
 </Section>
 

@@ -1,10 +1,13 @@
 ---
 import Section from '@/components/Section.astro'
+import type { Project } from '@/types/cv'
 
-import { projects } from '@cv'
+const { title, cv } = Astro.props
+
+const { projects }: { projects: Project[] } = cv
 ---
 
-<Section title="Projects" emoji="💻">
+<Section title={title ?? "Projects"} emoji="💻">
 
     <ul>
         {

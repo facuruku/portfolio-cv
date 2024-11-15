@@ -8,19 +8,20 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 
-import cv from "@cvEN"
-const { basics } = cv
+import cv from "@cvDE"
+
+const {basics} = cv
 const { name, label} = basics
 ---
 
 <Layout title={`${name} Portfolio | ${label}`}>
 	<main>
 		<Hero cv={cv}/>
-		<About cv={cv}/>
-		<Experience cv={cv}/>
-		<Education cv={cv}/>
-		<Skills cv={cv}/>
-		<Projects cv={cv}/>
+		<About title="Über mich" cv={cv}/>
+		<Experience title="Berufserfahrung" cv={cv}/>
+		<Education title="Ausbildung" cv={cv}/>
+		<Skills title="Fähigkeiten" cv={cv}/>
+		<Projects title="Projekte" cv={cv}/>
 	</main>
 </Layout>
 

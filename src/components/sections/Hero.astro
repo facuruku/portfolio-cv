@@ -1,10 +1,13 @@
 ---
-import { basics } from '@/cv.json'
 import Section from '@/components/Section.astro'
 import Mail from '@/icons/Mail.astro'
 import LinkedIn from '@/icons/LinkedIn.astro'
 import GitHub from '@/icons/GitHub.astro'
 import WorldMap from '@/icons/WorldMap.astro'
+import type { Profile } from '@/types/cv'
+
+const { cv } = Astro.props
+const { basics } = cv
 
 const { name, label, image, location, profiles, email  } = basics
 const { city, region } = location
@@ -14,9 +17,9 @@ const SOCIAL_ICONS: Record<string, any> = {
     LinkedIn,
 }
 
-const linkedinInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedinInfo = profiles.find(({ network }: Profile) => network === "LinkedIn");
 const linkedInUrl = linkedinInfo?.url.replace('https://','') || "#";
-const githubInfo = profiles.find(({ network }) => network === "GitHub");
+const githubInfo = profiles.find(({ network }: Profile) => network === "GitHub");
 const githubUrl = githubInfo?.url.replace('https://','') || "#";
 ---
 
@@ -54,7 +57,7 @@ const githubUrl = githubInfo?.url.replace('https://','') || "#";
                     )
                 }
                 {
-                    profiles.map(({ network, url }) => {
+                    profiles.map(({ network, url }: { network: string, url: string }) => {
                         const Icon = SOCIAL_ICONS[network]
                         return (
                             <a href={url}

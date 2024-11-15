@@ -1,10 +1,13 @@
 ---
 import Section from '@/components/Section.astro'
+import type { Work } from '@/types/cv'
 
-import { work } from '@cv'
+const { title, cv } = Astro.props
+
+const { work }: { work: Work[] } = cv
 ---
 
-<Section title="Experience" emoji="💼">
+<Section title={title ?? "Experience"} emoji="💼">
 
     <ul>
         {work.map(({name, startDate, endDate, position, summary, url}) => {

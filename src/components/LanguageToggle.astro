@@ -1,0 +1,149 @@
+---
+import SpanishIcon from "@/icons/Spanish.astro"
+import EnglishIcon from "@/icons/English.astro"
+import GermanIcon from "@/icons/German.astro"
+
+const LANGUAGES = [
+  { name: "English", code: "en" },
+  { name: "Spanish", code: "es" },
+  { name: "German", code: "de" },
+  ]
+
+---
+
+<div class="relative ml-1 mr-1">
+  <button
+    transition:persist
+    id="language-toggle-btn"
+    class="appearance-none border-none flex hover:scale-125 transition"
+  >
+    <span class="sr-only">Choose language</span>
+    <SpanishIcon id="es" class="language-toggle-icon size-5 transition-all" />
+    <EnglishIcon
+      id="en"
+      class="language-toggle-icon absolute size-5 transition-all"
+    />
+    <GermanIcon
+      id="de"
+      class="language-toggle-icon absolute size-5 transition-all"
+    />
+  </button>
+  <div
+    transition:persist
+    id="languages-menu"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+  >
+    <ul>
+      {
+        LANGUAGES.map((language) => (
+          <li id={language.code} class="languages-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
+            {language.name}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  #languages-menu.open {
+    display: inline;
+    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+
+  const DEFAULT_LANGUAGE = "en"
+
+  const languagesMenu = document.getElementById("languages-menu")
+
+    const updateLanguage = (language) => {
+
+    localStorage.setItem("language", language);
+
+    let newPath = `/${language}`;
+    
+    if(language === DEFAULT_LANGUAGE) { 
+      newPath = "/";
+    }
+    window.location.href = newPath;
+    
+  }
+
+  const getLanguagePreference = () => {
+
+    const urlPath = window.location.pathname.split('/')[1];
+    const supportedLanguages = ["en", "es", "de"];
+
+    if (supportedLanguages.includes(urlPath)) {
+      return urlPath;
+    }
+
+    if (typeof localStorage !== "undefined") {
+      const storedLanguage = localStorage.getItem("language");
+      if (storedLanguage) {
+        if(storedLanguage !== DEFAULT_LANGUAGE){
+          updateLanguage(storedLanguage)
+        }
+        return storedLanguage;
+      }
+    }
+
+    const browserLanguage = navigator.language || navigator.userLanguage;
+    if (browserLanguage) {
+      if (browserLanguage.startsWith("en")) {
+        return "en";
+      } else if (browserLanguage.startsWith("de")) {
+        return "de";
+      } else if (browserLanguage.startsWith("es")) {
+        return "es";
+      }
+    }
+
+    return DEFAULT_LANGUAGE;
+  };
+
+  const updateLanguageIcon = (languagePreference) => {
+    document.querySelectorAll(".language-toggle-icon").forEach((element) => {
+      element.style.scale = element.id === languagePreference ? "1" : "0"
+    })
+  }
+
+  updateLanguageIcon(getLanguagePreference())
+
+
+  closeThemeDialog = () => {
+    document.querySelector("#themes-menu")?.classList.remove("open");
+  }
+
+  document.addEventListener("click", () => languagesMenu.classList.remove("open"))
+
+  document.getElementById("language-toggle-btn").addEventListener("click", (e) => {
+    e.stopPropagation()
+    closeThemeDialog()
+    const isClosed = !languagesMenu.classList.contains("open")
+    languagesMenu.classList[isClosed ? "add" : "remove"]("open")
+  })
+
+  document.querySelectorAll(".languages-menu-option").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      let language = e.target.id.toLowerCase().trim()
+      updateLanguage(language)
+    })
+  })
+
+
+</script>

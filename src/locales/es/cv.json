@@ -1,0 +1,243 @@
+{
+  "basics": {
+    "name": "Facundo M. Meza Tarancón",
+    "label": "Desarrollador Full Stack transformando necesidades de usuarios en soluciones innovadoras",
+    "image": "/me.webp",
+    "email": "contacto@facundomeza.com",
+    "phone": "(912) 555-4321",
+    "url": "https://facundomeza.com",
+    "summary": "años de experiencia en desarrollo web trabajando de forma remota. Soy un desarrollador apasionado que ama aprender nuevas tecnologías y compartir conocimientos. Soy un jugador de equipo y siempre estoy buscando nuevos desafíos.",
+    "location": {
+      "address": "",
+      "postalCode": "38400",
+      "city": "Tenerife",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "facumeza",
+        "url": "https://linkedin.com/in/facumeza"
+      },
+      {
+        "network": "GitHub",
+        "username": "facuruku",
+        "url": "https://github.com/facuruku"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "CIB Group GmbH",
+      "position": "Desarrollador Full Stack",
+      "url": "https://cib.de",
+      "startDate": "2021-09-01",
+      "endDate": null,
+      "summary": "Trabajando con el cliente alemán AKDB, contribuyendo al desarrollo de una aplicación de gestión fiscal para la administración pública de Baviera. Colaboré con muchos equipos, manejando análisis y desarrollo front/back-end.",
+      "highlights": ["Comencé en la empresa"]
+    },
+    {
+      "name": "Nartex Software SL",
+      "position": "Desarrollador Full Stack",
+      "url": "https://www.nartexsoft.com/",
+      "startDate": "2021-03-01",
+      "endDate": "2021-09-01",
+      "summary": "Responsable de migrar y mejorar DIRCAC (aplicación de gestión de usuarios y directorios para el Gobierno de Canarias). Migrando la base de código existente de Spring a Spring Boot, supervisando mejoras tanto en el front-end como en el back-end.",
+      "highlights": ["Comencé en la empresa"]
+    },
+    {
+      "name": "MecaClima SL",
+      "position": "Mecánico",
+      "url": "https://www.tallermecaclima.com/quienes-somos",
+      "startDate": "2018-05-01",
+      "endDate": "2019-09-01",
+      "summary": "Mecánico de refrigeración a tiempo completo responsable de la resolución de problemas y reparaciones en la flota de vehículos de TITSA SL en el norte de Tenerife. (+200 Vehículos)",
+      "highlights": ["Comencé en la empresa"]
+    },
+    {
+      "name": "Binter",
+      "position": "Técnico de Manejo de Aeronaves",
+      "url": "https://www.bintercanarias.com/es/corporativo",
+      "startDate": "2017-02-01",
+      "endDate": "2018-04-30",
+      "summary": "Operaciones de tierra en el Aeropuerto de Tenerife Norte (TFN), asegurando el movimiento seguro de vehículos, personal y aeronaves, junto con la manipulación y supervisión de carga.",
+      "highlights": ["Comencé en la empresa"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organización",
+      "position": "Voluntario",
+      "url": "https://organization.com/",
+      "startDate": "2021-03-01",
+      "endDate": "2013-09-01",
+      "summary": "Descripción…",
+      "highlights": ["Premiado 'Voluntario del Mes'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "CIFP César Manrique",
+      "url": "https://www3.gobiernodecanarias.org/medusa/edublog/cifpcesarmanrique/",
+      "area": "Desarrollo de Software",
+      "studyType": "Grado en Desarrollo Web",
+      "startDate": "2019-09-01",
+      "endDate": "2021-04-01",
+      "score": "9.8",
+      "courses": ["DB1101 - SQL Básico"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Premio",
+      "date": "2014-11-01",
+      "awarder": "Empresa",
+      "summary": "No hay cuchara."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Vaadin",
+      "date": "2021-11-07",
+      "issuer": "Empresa",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Springboot & Spring MVC",
+      "date": "2021-11-07",
+      "issuer": "Empresa",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Vue",
+      "date": "2021-11-07",
+      "issuer": "Empresa",
+      "url": "https://certificate.com"
+    },
+    {
+      "name": "Thymeleaf",
+      "date": "2021-11-07",
+      "issuer": "Empresa",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publicación",
+      "publisher": "Empresa",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Descripción…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Springboot"
+    },
+    {
+      "name": "Vaadin"
+    },
+    {
+      "name": "JUnit"
+    },
+    {
+      "name": "Seleinum"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "Docker"
+    },
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "Vue"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Hablante nativo (C2)"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Competencia profesional (C1)"
+    },
+    {
+      "language": "Alemán",
+      "fluency": "Intermedio bajo (A1)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Vida Silvestre",
+      "keywords": ["Hurones", "Unicornios"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Referencia…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "OK.FINN",
+      "isActive": true,
+      "description": "Descripción en construcción...🚧",
+      "stack": ["Java", "Vaadin", "JUnit", "Seleinum", "Docker"],
+      "role": "Desarrollador Full Stack",
+      "url": "https://www.akdb.de/loesungen/okfinanzen/okfinn/"
+    },
+    {
+      "name": "doXiview",
+      "isActive": true,
+      "description": "Descripción en construcción...🚧",
+      "role": "Desarrollador Full Stack",
+      "stack": ["Vue", "Java"],
+      "url": "https://www.cib.de/es/doxiview/"
+    },
+    {
+      "name": "DIRCAC",
+      "isActive": true,
+      "description": "Descripción en construcción...🚧",
+      "role": "Desarrollador Full Stack",
+      "stack": ["Java", "Springboot", "Thymeleaf"],
+      "url": "https://www.gobiernodecanarias.org/transformaciondigital/platino/servicios/dircac/"
+    },
+    {
+      "name": "Musicfy",
+      "isActive": true,
+      "description": "Descripción en construcción...🚧",
+      "stack": ["Vue", "Vite", "Firebase", "TailwindCSS"],
+      "role": "Proyecto Personal",
+      "url": "https://musicfy.facundomeza.com/"
+    },
+    {
+      "name": "AmigoInvisible",
+      "isActive": false,
+      "description": "Descripción en construcción...🚧",
+      "role": "Proyecto Personal",
+      "stack": ["Vue"],
+      "url": "#"
+    }
+  ]
+}

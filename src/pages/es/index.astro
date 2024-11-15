@@ -8,7 +8,7 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 
-import cv from "@cvEN"
+import cv from "@cvES"
 const { basics } = cv
 const { name, label} = basics
 ---
@@ -16,11 +16,11 @@ const { name, label} = basics
 <Layout title={`${name} Portfolio | ${label}`}>
 	<main>
 		<Hero cv={cv}/>
-		<About cv={cv}/>
-		<Experience cv={cv}/>
-		<Education cv={cv}/>
-		<Skills cv={cv}/>
-		<Projects cv={cv}/>
+		<About title="Sobre mi" cv={cv}/>
+		<Experience title="Experiencia" cv={cv}/>
+		<Education title="Formación" cv={cv}/>
+		<Skills title="Habilidades" cv={cv}/>
+		<Projects title="Projectos" cv={cv}/>
 	</main>
 </Layout>
 

@@ -102,17 +102,6 @@ const LANGUAGES = [
       }
     }
 
-    const browserLanguage = navigator.language || navigator.userLanguage;
-    if (browserLanguage) {
-      if (browserLanguage.startsWith("en")) {
-        return "en";
-      } else if (browserLanguage.startsWith("de")) {
-        return "de";
-      } else if (browserLanguage.startsWith("es")) {
-        return "es";
-      }
-    }
-
     return DEFAULT_LANGUAGE;
   };
 

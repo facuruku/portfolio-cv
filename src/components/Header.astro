@@ -3,7 +3,7 @@ import ThemeToggle from '@/components/ThemeToggle.astro';
 import LanguageToggle from '@/components/LanguageToggle.astro';
 ---
 
-<header class="header no-print">
+<header class="header no-print p-6 md:pr-0">
     <LanguageToggle/>
     <ThemeToggle/>
 </header>
@@ -23,7 +23,6 @@ import LanguageToggle from '@/components/LanguageToggle.astro';
 .header{
   max-width: 700px;
   margin:auto;
-  padding: 1.5rem;
   display: flex;
   justify-content: end;
   align-items: center;
